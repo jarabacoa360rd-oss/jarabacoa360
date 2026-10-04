@@ -182,7 +182,6 @@ renderLand();renderVillas();renderPros();loadRequests();
 </script>
 
 <script id="j360-splash-script">
-function enterJ360(){const s=document.getElementById("j360Splash");s.classList.add("hide");setTimeout(()=>s.remove(),500);try{sessionStorage.setItem("j360_started","1")}catch(e){}}
-(function(){try{const s=document.getElementById("j360Splash");if(sessionStorage.getItem("j360_started")==="1")s.remove()}catch(e){}})();
+function enterJ360(){const s=document.getElementById("j360Splash");if(!s)return;s.classList.add("hide");setTimeout(()=>s.remove(),500)}
 </script></body>
 </html>
